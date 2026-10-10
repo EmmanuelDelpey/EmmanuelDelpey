@@ -3,7 +3,7 @@
 > Agenda architectural. Chaque journée est un atoll : un anneau de terre construit autour d'un lagon.
 > On ne lit plus une liste d'heures, on lit un paysage.
 
-*Edel & Nomen — v0.1*
+*Edel & Nomen — v0.2*
 
 ---
 
@@ -562,4 +562,46 @@ interface DayPlan {          // sortie du générateur
 
 ---
 
-*Edel & Nomen — Attol, dossier de conception v0.1*
+## 12. Référence visuelle n°1 — « Working Day »
+
+![Working Day](references/inspiration-01-working-day.jpg)
+
+*Inspiration, rien d'absolu.* Lecture critique : ce qu'on prend, ce qu'on adapte, ce qu'on écarte.
+
+### 12.1 Retenu
+| Élément | Pourquoi | Intégration Attol |
+|---|---|---|
+| **Pavage hexagonal** | Contours harmonieux, crénelage organique, se raccorde en anneau sans déformation | **1 hexagone = 15 min**. L'anneau devient une couronne d'hexagones ; une tâche = un groupe d'hexagones contigus. Remplace les secteurs annulaires du §1.2. |
+| **Diorama flottant à tranche épaisse** | L'atoll devient un *objet* qu'on tient ; la tranche (terre, roche) ancre la lecture | Tranche visible ; les sur-heures débordent en *socle* ajouté, visiblement rapporté. |
+| **Biomes par bloc** (verre, brique, village, forêt) | Différenciation instantanée des types sans lire | Confirme §2 : style = type. |
+| **Réseaux typés** : autoroutes de données lumineuses / route goudronnée / chemin de terre | Idée forte non prévue au v0.1 | **Le type de réseau encode le réservoir dominant** : données lumineuses = cognitif, route = relationnel / logistique, chemin de terre = physique / récupération. |
+| **Feux rouges sur l'embouteillage** | Signal de surcharge lisible même en petit | Feux = seuil rouge de trafic induit (§4.5). |
+| **Icônes flottantes** (croix rouge) | Enseigne lisible au-dessus du bâti | Pastilles flottantes aux niveaux L2-L3. |
+| **Curseur jour ↔ nuit** | Navigation dans le temps directe | Devient le **curseur temporel** : on fait défiler l'heure, le soleil tourne, les fenêtres s'éteignent au fur et à mesure → relecture / anticipation de la journée. |
+| **Indicateurs Vitalité + Équilibre** | Synthèse chiffrée sous la scène | Vitalité = capacité restante ; Équilibre = **les 5 réservoirs** en barres. |
+| **Sélecteur LOD MACRO / MESO / MICRO** | Rend explicite le niveau de lecture | Garder comme indicateur (le pincement reste le geste principal) ; correspond à L1 / L2 / L3. |
+| **Mini-carte + heure courante** | Repère quand on zoome | Conserver en L2-L3 uniquement. |
+
+### 12.2 Adapté
+- **Centre = îlot « START » au lieu d'eau.** L'image met une île au centre ; le concept veut un lagon. Synthèse : **lagon conservé, petit îlot central portant le phare** (§5.1). Le phare = maintenant ; les ponts partent du lagon ; l'îlot ne porte aucune tâche.
+- **Lac de décompression** (18-20 h) : bonne intuition — l'eau *locale* sur l'anneau = récupération. À formaliser : un plan d'eau intérieur à un bloc = détente prévue.
+- **Format paysage → portrait.** L'image est pensée desktop. En portrait : atoll plein écran, étiquettes uniquement au niveau MESO, KPIs en bande haute compacte, curseur temporel en bas au pouce.
+
+### 12.3 Écarté / à corriger
+- **Étiquettes d'illustration** (« Power Grid », « Road Network », « Car ») : ce sont des annotations de planche, pas de l'UI. Bruit à supprimer.
+- **Hauteur non corrélée à la charge** : les tours de verre du « Main Project » dominent, mais le « Focused Admin » est le vrai point chaud (embouteillage). Viole la règle *hauteur = charge*. Dans Attol, l'admin saturé serait le plus haut.
+- **Ordre temporel peu lisible** : le départ est au centre, puis l'anneau commence en bas à droite. Sans repère d'horloge fixe (midi en haut), on cherche. Midi toujours en haut.
+- **Libellés dupliqués / incohérents** (deux « 16h-18h », texte illisible) : rappel qu'un générateur d'images ne remplace pas la grammaire.
+- **Trop de détail au niveau MACRO** : personnages, voitures, panneaux visibles d'emblée. En L1, silhouettes et couleurs seulement.
+
+### 12.4 Conséquence sur la grammaire (§1.3)
+Deux lignes ajoutées :
+
+| Variable visuelle | Information |
+|---|---|
+| **Cellule hexagonale** | Unité de 15 min |
+| **Nature du réseau** (données lumineuses / route / chemin) | Réservoir dominant de la liaison |
+
+---
+
+*Edel & Nomen — Attol, dossier de conception v0.2*
